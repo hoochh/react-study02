@@ -24,9 +24,17 @@ class App3 extends React.Component {
     count: 0,
   };
 
+  // setState()는 비동기로 동작함 > 원하는 순간 데이터의 변경을 보장하지 못함
+  // 함수형태로 실행 > setState()의 매개변수로 함수를 넘기면 정상적으로 사용할 수 있음
   add = () => {
-    console.log('Add');
-    this.setState({ count: this.state.count + 1 });
+    //원래 함수
+    //this.setState({ count: this.state.count + 1 });
+
+    //변경된 방법
+    //setState()의 매개변수로 함수를 넘겨줌
+    this.setState((current) => ({
+      count: current.count + 1,
+    }));
   };
 
   // 위 함수와 동일
@@ -36,7 +44,11 @@ class App3 extends React.Component {
 
   minus = () => {
     console.log('minus');
-    if (this.state.count > 0) this.setState({ count: this.state.count - 1 });
+    //if (this.state.count > 0) this.setState({ count: this.state.count - 1 });
+    //setState()의 매개변수로 함수를 넘겨줌
+    this.setState((current) => ({
+      count: current.count - 1,
+    }));
   };
 
   render() {
