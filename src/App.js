@@ -1,6 +1,6 @@
 import './App.css';
 import { Info } from './info';
-import Addr from './address';
+import Address from './address';
 
 // 문제 1) 컴포넌트 info.js 파일을 생성하고 자신의 간단한 정보를 출력하는 페이지를
 // 화면에 출력
@@ -19,8 +19,8 @@ function App() {
     <div>
       <Info />
       <br />
-      <Addr name="홍길동" gender="남자" email="서울" />
-      <Addr name="홍길순" gender="여자" email="부산" />
+      <Address name="홍길동" gender="남자" email="hgd@gmail.com" />
+      <Address name="홍길순" gender="여자" email="hgs@gmail.com" />
     </div>
   );
 }
