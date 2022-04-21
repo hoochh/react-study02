@@ -4,6 +4,7 @@ import React from 'react';
 // <img> -> <img></img> / <img />
 // props에 데이터가 전달되어 const형의 {name, gender, email} 변수가 생성됨 >> {key}로 사용 가능
 // props.name / props.gender / props.email 로
+
 function Addr(props) {
   const { name, gender, email } = props;
 
