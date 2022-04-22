@@ -12,7 +12,7 @@ class App4 extends React.Component {
   //{}는 오브젝트형
   state = { ch: 1, vol: 0, volIcon: '' };
 
-  // 매개변수로 current 대신 state를 주면?
+  // 매개변수로 current 대신 state를 주면? 차이 없음..
   // state는 var state로 선언된 것이기 때문에 중복 선언 가능,
   // var a=10; 이후 var a; 이면 a 값은 10으로 유지됨
   // 즉 변경된 값 외에 state 내의 나머지 값은 유지가 됨

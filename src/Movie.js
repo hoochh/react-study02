@@ -1,0 +1,27 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import './Movie.css';
+
+// 객체 분할 방식으로
+function Movie({ year, title, summary, poster }) {
+  return (
+    <div className="movie">
+      <img src={poster} alt={title} title={title} />
+      <div className="movie-data">
+        <h3 className="movie-title">{title}</h3>
+        <h5 className="movie-year">{year}</h5>
+        <p className="movie-summary">{summary}</p>
+      </div>
+    </div>
+  );
+}
+
+Movie.propTypes = {
+  year: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  poster: PropTypes.string.isRequired,
+};
+
+export default Movie;
