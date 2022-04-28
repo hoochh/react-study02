@@ -8,7 +8,12 @@ import './Movie.css';
 function Movie({ year, title, summary, poster, genres }) {
   return (
     <div className="movie">
-      <Link to={{ pathname: '/movie-detail', state: { year, title, summary, poster, genres } }}>
+      <Link
+        to={{
+          pathname: '/movie-detail',
+          state: { year, title, summary, poster, genres },
+        }}
+      >
         <img src={poster} alt={title} title={title} />
         <div className="movie-data">
           <h3 className="movie-title">{title}</h3>
